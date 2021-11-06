@@ -12,7 +12,22 @@
 		50E53ECB2736C002006CD0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50E53ECA2736C002006CD0EF /* Assets.xcassets */; };
 		50E53ECE2736C002006CD0EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50E53ECC2736C002006CD0EF /* Main.storyboard */; };
 		50E53ED02736C002006CD0EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E53ECF2736C002006CD0EF /* main.m */; };
+		50E53EDA2736C1E3006CD0EF /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E53ED92736C1E3006CD0EF /* Server.m */; };
+		50EE295E2736DC9C00ABEF70 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EE295D2736DC9C00ABEF70 /* main.m */; };
+		50EE29642736E3C600ABEF70 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 50EE29632736E3C600ABEF70 /* Client.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		50EE29592736DC9C00ABEF70 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		50E53EC12736C000006CD0EF /* StudyMachPortServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudyMachPortServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +39,24 @@
 		50E53ECD2736C002006CD0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		50E53ECF2736C002006CD0EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50E53ED12736C002006CD0EF /* StudyMachPortServer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StudyMachPortServer.entitlements; sourceTree = "<group>"; };
+		50E53ED82736C1E3006CD0EF /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		50E53ED92736C1E3006CD0EF /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		50EE29312736CBDD00ABEF70 /* ServerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerProtocol.h; sourceTree = "<group>"; };
+		50EE295B2736DC9C00ABEF70 /* StudyMachPortServerCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = StudyMachPortServerCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		50EE295D2736DC9C00ABEF70 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		50EE29622736E3C600ABEF70 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		50EE29632736E3C600ABEF70 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		50E53EBE2736C000006CD0EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50EE29582736DC9C00ABEF70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,7 +69,9 @@
 		50E53EB82736C000006CD0EF = {
 			isa = PBXGroup;
 			children = (
+				50EE29302736CBCA00ABEF70 /* Common */,
 				50E53EC32736C000006CD0EF /* StudyMachPortServer */,
+				50EE295C2736DC9C00ABEF70 /* StudyMachPortServerCLI */,
 				50E53EC22736C000006CD0EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				50E53EC12736C000006CD0EF /* StudyMachPortServer.app */,
+				50EE295B2736DC9C00ABEF70 /* StudyMachPortServerCLI */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,12 +92,32 @@
 				50E53EC52736C000006CD0EF /* AppDelegate.m */,
 				50E53EC72736C000006CD0EF /* ViewController.h */,
 				50E53EC82736C000006CD0EF /* ViewController.m */,
+				50E53ED82736C1E3006CD0EF /* Server.h */,
+				50E53ED92736C1E3006CD0EF /* Server.m */,
 				50E53ECA2736C002006CD0EF /* Assets.xcassets */,
 				50E53ECC2736C002006CD0EF /* Main.storyboard */,
 				50E53ECF2736C002006CD0EF /* main.m */,
 				50E53ED12736C002006CD0EF /* StudyMachPortServer.entitlements */,
 			);
 			path = StudyMachPortServer;
+			sourceTree = "<group>";
+		};
+		50EE29302736CBCA00ABEF70 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				50EE29312736CBDD00ABEF70 /* ServerProtocol.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		50EE295C2736DC9C00ABEF70 /* StudyMachPortServerCLI */ = {
+			isa = PBXGroup;
+			children = (
+				50EE295D2736DC9C00ABEF70 /* main.m */,
+				50EE29622736E3C600ABEF70 /* Client.h */,
+				50EE29632736E3C600ABEF70 /* Client.m */,
+			);
+			path = StudyMachPortServerCLI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +140,23 @@
 			productReference = 50E53EC12736C000006CD0EF /* StudyMachPortServer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		50EE295A2736DC9C00ABEF70 /* StudyMachPortServerCLI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50EE295F2736DC9C00ABEF70 /* Build configuration list for PBXNativeTarget "StudyMachPortServerCLI" */;
+			buildPhases = (
+				50EE29572736DC9C00ABEF70 /* Sources */,
+				50EE29582736DC9C00ABEF70 /* Frameworks */,
+				50EE29592736DC9C00ABEF70 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StudyMachPortServerCLI;
+			productName = StudyMachPortServerCLI;
+			productReference = 50EE295B2736DC9C00ABEF70 /* StudyMachPortServerCLI */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +167,9 @@
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
 					50E53EC02736C000006CD0EF = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					50EE295A2736DC9C00ABEF70 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -116,6 +188,7 @@
 			projectRoot = "";
 			targets = (
 				50E53EC02736C000006CD0EF /* StudyMachPortServer */,
+				50EE295A2736DC9C00ABEF70 /* StudyMachPortServerCLI */,
 			);
 		};
 /* End PBXProject section */
@@ -139,7 +212,17 @@
 			files = (
 				50E53EC92736C000006CD0EF /* ViewController.m in Sources */,
 				50E53ED02736C002006CD0EF /* main.m in Sources */,
+				50E53EDA2736C1E3006CD0EF /* Server.m in Sources */,
 				50E53EC62736C000006CD0EF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50EE29572736DC9C00ABEF70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50EE29642736E3C600ABEF70 /* Client.m in Sources */,
+				50EE295E2736DC9C00ABEF70 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +363,7 @@
 				DEVELOPMENT_TEAM = FRJG63497R;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Common";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -306,6 +390,7 @@
 				DEVELOPMENT_TEAM = FRJG63497R;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Common";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -317,6 +402,28 @@
 				PRODUCT_BUNDLE_IDENTIFIER = net.daybysay.StudyMachPortServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		50EE29602736DC9C00ABEF70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRJG63497R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Common";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50EE29612736DC9C00ABEF70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRJG63497R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/Common";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -337,6 +444,15 @@
 			buildConfigurations = (
 				50E53ED52736C002006CD0EF /* Debug */,
 				50E53ED62736C002006CD0EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50EE295F2736DC9C00ABEF70 /* Build configuration list for PBXNativeTarget "StudyMachPortServerCLI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50EE29602736DC9C00ABEF70 /* Debug */,
+				50EE29612736DC9C00ABEF70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

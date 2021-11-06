@@ -73,6 +73,24 @@
     }
 }
 
+- (void)sendText:(NSString *)text {
+    NSData *data = [text dataUsingEncoding:NSUTF8StringEncoding];
+    NSPort *sendPort = [self serverPort];
+    if (sendPort == nil) {
+        NSLog(@"Unable to connect to server port");
+        return;
+    }
+    NSArray *components = @[data];
+    NSPortMessage *message = [[NSPortMessage alloc] initWithSendPort:sendPort
+                                                         receivePort:nil
+                                                          components:components];
+    message.msgid = ServerMsgTypeText;
+    NSDate *timeout = [NSDate dateWithTimeIntervalSinceNow:5.0];
+    if (![message sendBeforeDate:timeout]) {
+        NSLog(@"Send failed");
+    }
+}
+
 - (void)handlePortMessage:(NSPortMessage *)message {
     NSLog(@"Received response");
     _responseReceived = YES;

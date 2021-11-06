@@ -11,5 +11,6 @@
 
 - (void)sendNotifyMessage;
 - (void)sendNeedsResponseMessage;
+- (void)sendText:(NSString *)text;
 
 @end

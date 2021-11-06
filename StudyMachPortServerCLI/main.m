@@ -13,7 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         Client *client = [[Client alloc] init];
 //        [client sendNotifyMessage];
-        [client sendNeedsResponseMessage];
+//        [client sendNeedsResponseMessage];
+        [client sendText:@"hogehogehoge"];
     }
     return 0;
 }

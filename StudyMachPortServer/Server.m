@@ -50,6 +50,17 @@
             NSLog(@"Sent response");
         }
             break;
+        case ServerMsgTypeText: {
+            NSArray *components = message.components;
+            if (components.count <= 0) {
+                return;
+            }
+            
+            NSData *data = components[0];
+            NSString *text = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            NSLog(@"%@", text);
+        }
+            break;
         default:
             NSLog(@"Unexpected message ID %u", (unsigned)message.msgid);
             break;
